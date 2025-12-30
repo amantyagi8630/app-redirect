@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Opening App...</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta http-equiv="refresh" content="0; url=myapp://share" />
+    
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 20px; }
+        .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px;}
+    </style>
+</head>
+<body>
+    <h3>Opening App...</h3>
+    <p>If the app doesn't open automatically, tap the button below:</p>
+    
+    <a href="myapp://share" class="btn">Open App</a>
+
+    <script>
+        window.onload = function() {
+            window.location.href = "myapp://share";
+            
+            // Optional: Redirect to Play Store if app not installed after 2 seconds
+            // setTimeout(function() {
+            //     window.location.href = "https://play.google.com/store/apps/details?id=com.your.package";
+            // }, 2000);
+        };
+    </script>
+</body>
+</html>
